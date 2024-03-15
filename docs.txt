@@ -1,0 +1,385 @@
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Description:
+
+    Application that converts data from various configurations to Qr Code form.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Files in project:
+
+    1. Main.py
+
+    2. App.py
+
+    3. QrCodeWindow.py (GUI)
+
+    4. OutputWindow.py (GUI)
+
+    5. icons_rc.py (GUI)
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+A. Main.py (file):
+
+    This file contains codes that run the application.
+
+
+
+B. App.py (file):
+
+    This file contains codes about make Qr Code and show Output.
+
+
+    a. App (class):
+
+    
+        1. prev_button (variable) -> QPushButton | QObject | None
+                
+            Gets the value of the last button clicked
+
+
+        3. create_qr() (method) -> None
+                    
+            Method that generates QR Code.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        4. text() (method) -> None
+
+            Method that opens the text_page when the text_button is clicked.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+        
+        5. text_data() (method) -> str
+
+            Method that returns the content of text in text_page.
+
+            Args:
+                parent : @App
+
+            Returns:
+                str : content of text
+
+
+        6. text_qr() (method) -> None
+
+            Method that generates a QR Code from text form or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns :
+                None
+
+
+        7. link() (method) -> None
+
+            Method that opens the link_page when the link_button is clicked.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        8. link_data() (method) -> str
+
+            Method that returns the content of link in link_page.
+
+            Args:
+                parent : @App
+
+            Returns:
+                str : content of link
+
+
+        9. link_qr (method) -> None
+
+            Method that generates a QR Code or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        10. vcard() (method) -> None
+
+            Method that opens the vcard_page when the vcard_button is clicked.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        11. vcard_data() (method) -> dict
+
+            Method that returns the content of vcard in vcard_page.
+        vcard_page contains: name, displayname, email, phone, url, city,
+        zipcode, country, org, title, cellphone, homephone and workphone variables.
+
+            Args:
+                parent : @App
+
+            Returns:
+                dict : content of vcard
+
+
+        12. get_birthday() (method) -> datetime.date | None
+
+            Method that returns birthday value required for vcard.
+
+            Args:
+                parent : @App
+
+            Returns:
+                datetime.date : birthday value for vcard
+                None
+
+
+        13. vcard_qr() (method) -> None
+
+            Method that generates a QR Code which encodes a vCard (version 3.0.) or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        14. wifi() (method) -> None
+
+            Method that opens the wifi_page when the wifi_button is clicked.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        15. wifi_data() (method) -> dict
+
+            Method that returns the content of wifi in wifi_page.
+            wifi_page contains: ssid, password an security variables.
+
+            Args:
+                parent : @App
+                
+            Returns:
+                dict : content of wifi
+
+
+        16. wifi_qr() (method) -> None
+
+            Method that generates a QR Code from wifi configuration or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        17. email() (method) -> None
+
+            Method that opens the email_page when the email_button is clicked.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        18. email_data() (method) -> dict
+
+            Method that returns the content of email in email_page.
+            email_page contains: to, subject and body variables.
+
+            Args:
+                parent : @App
+
+            Returns:
+                dict : content of email
+                None
+
+
+        19. email_qr() (method) -> None
+
+            Method that generates a QR Code to send email or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        20. geo() (method) -> None
+
+            Method that opens the geo_page when the geo_button is clicked.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        21. geo_data() (method) -> dict
+
+            Method that returns the content of geo location in geo_page.
+            geo_page contains: latitude and longitude variables.
+            Type of these variables are float.
+            -90 < latitude value < +90
+            -180 < longitude value < +180
+
+            Args:
+                parent : @App
+
+            Returns:
+                dict : content of geo
+
+
+        22. geo_qr() (method) -> None
+
+            Method that generates a QR Code which encodes geographic location or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        23. micro() (method) -> None
+
+            Method that opens the micro_page when the micro_button is clicked.
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        24. micro_data() (method) -> str
+
+            Method that returns the content of micro in micro_page.
+
+            Args:
+                parent : @App
+
+            Returns:
+                str : content of micro
+
+
+        25. micro_qr() (method) -> None
+
+            Method that generates a micro QR Code or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        26. barcode() (method) -> None
+
+            Method that opens the barcode_page when the barcode_button is clicked.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        27. barcode_data() (method) -> dict
+
+            Method that returns the content of barcode in barcode_page.
+            barcode_page contains: type of barcode and barcode number.
+
+            Args:
+                parent : @App
+
+            Returns:
+                dict : content of barcode
+
+
+        28. barcode_2d() (method) -> None
+
+            Method that generates a 2D Barcode or throws error box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        29. show_output() (method) -> None
+
+            Method that shows Output Window and the generated output and calls the clear_all method.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        30. clear_all() (method) -> None
+
+            Method that clears input after QR Code is generated.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+        31. error_msg (method) -> None
+
+            If invalid data has been entered, method that returns an error message box.
+
+            Args:
+                parent : @App
+
+            Returns:
+                None
+
+
+
+    b. Output (class):
+
+
+        1. show_output() (method) -> None
+
+            Method that displays the generated output.
+
+            Args:
+                parent : @InsertPerson
+
+            Returns:
+                None
+
+----------------------------------------------------------------------------------------------------------------------------------------
