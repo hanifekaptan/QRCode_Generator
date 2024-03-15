@@ -1,0 +1,5 @@
+python==3.11.2
+PyQt5Designer==5.14.1
+PyQt5==5.15.10
+segno==1.6.0
+python-barcode==0.15.1
