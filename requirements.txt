@@ -1,0 +1,3 @@
+streamlit
+segno==1.6.1
+barcode==1.0.4
