@@ -84,7 +84,7 @@ class QRCodeGenerator:
         else:
             qr_code.write(buffer)  # Save barcode
         buffer.seek(0)
-        st.image(buffer, caption="Generated Code", use_column_width=True)  # Show the image
+        st.image(buffer, caption="Generated Code", use_container_width=True)  # Show the image
     
     def download(self, data):
         """
