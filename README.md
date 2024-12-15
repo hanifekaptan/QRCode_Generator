@@ -1,6 +1,3 @@
-# QRCode_Generator
-The application, developed using Python, PyQt5, PyQt5 Designer, Python Barcode and Segno, converts data in various formats into QRCode and 2D Barcode form. This application aims to easily convert data in existing forms into QRCode with a simple interface.
-
 # QR Code Generator
 This application allows users to create QR codes and barcodes for text, links, VCards, Wi-Fi information, and more. With its user-friendly interface, different types of codes can be easily generated and downloaded. The project is developed using Python and Streamlit.
 
