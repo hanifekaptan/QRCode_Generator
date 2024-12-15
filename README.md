@@ -31,9 +31,11 @@ This will launch the application in your web browser.
 
 ### Desktop Version
 ***Main Page:***
+
 ![image](https://github.com/hnfkptn/QRCode_Generator/assets/129584767/d8668264-4301-453f-ac9a-de54c0cf8ed5)
 
 ***Output:*** 
+
 ![image-1](https://github.com/hnfkptn/QRCode_Generator/assets/129584767/463b5b1c-a6ac-494a-ba21-c96c3dd8281f)
 
 
